@@ -1,21 +1,9 @@
-# Практическое занятие 3 — JSON и внешние API
+# Контрольная работа №1 — Фронтенд и бэкенд разработка
 
-В папке подготовлены:
-- `postman_collection.json` — коллекция для Postman;
-- `postman_environment.json` — environment с базовым URL;
-- `REPORT.md` — единый отчёт по запросам.
+В архиве собраны решения по практическим занятиям 1–5:
 
-## Что включено
-### Локальный API (задание из практики 2)
-Не менее 3 запросов:
-- GET /products
-- POST /products
-- PATCH /products/1
-- DELETE /products/3
-
-### Внешние API
-Для воспроизводимости использованы публичные сервисы **без ключа**:
-- Open-Meteo
-- Frankfurter
-- REST Countries
-
+1. **задание1_sass_product_card** — карточка товара на SASS (переменные, миксин, вложенность).
+2. **задание2_express_products_api** — CRUD API для списка товаров на Node.js + Express.
+3. **задание3_postman_testing** — Postman-коллекция для тестирования локального API и внешних публичных API.
+4. **задание4_store_react_express** — связка React + Express: мини интернет-магазин с 10+ товарами.
+5. **задание5_swagger_user_api** — CRUD API пользователей с документацией Swagger (`/api-docs`).

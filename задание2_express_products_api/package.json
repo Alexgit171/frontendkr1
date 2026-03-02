@@ -1,0 +1,14 @@
+{
+  "name": "task2-express-products-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRUD API for products",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
