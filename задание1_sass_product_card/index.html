@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карточка товара на SASS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <article class="product-card">
+      <div class="product-card__media">
+        <img src="./product-photo.svg" alt="Смарт-часы X1" class="product-card__image" />
+      </div>
+
+      <div class="product-card__content">
+        <span class="product-card__badge">Новинка</span>
+        <h1 class="product-card__title">Смарт-часы X1</h1>
+        <p class="product-card__description">
+          Лёгкие смарт-часы с AMOLED-дисплеем, влагозащитой IP68, автономностью до 10 дней
+          и базовым трекингом сна, пульса и тренировок.
+        </p>
+
+        <div class="product-card__footer">
+          <div class="product-card__price">7 990 ₽</div>
+
+          <div class="product-card__actions">
+            <button class="btn">В корзину</button>
+            <button class="btn btn--ghost">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

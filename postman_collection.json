@@ -1,0 +1,258 @@
+{
+  "info": {
+    "name": "KR1 - Practical task 3",
+    "_postman_id": "d2c3180f-17b2-4fb4-9f06-kr1task3",
+    "description": "Коллекция для тестирования локального API товаров и внешних публичных API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Local API / GET all products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/products",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Local API / POST create product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Игровая гарнитура SoundStorm\",\n  \"price\": 5590\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/products",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Local API / PATCH product by id",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 69990\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/products/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Local API / DELETE product by id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/products/3",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "products",
+            "3"
+          ]
+        }
+      }
+    },
+    {
+      "name": "External API / Open-Meteo current weather Moscow",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&current=temperature_2m,wind_speed_10m",
+          "protocol": "https",
+          "host": [
+            "api",
+            "open-meteo",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "forecast"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "55.7522"
+            },
+            {
+              "key": "longitude",
+              "value": "37.6156"
+            },
+            {
+              "key": "current",
+              "value": "temperature_2m,wind_speed_10m"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "External API / Open-Meteo 3-day forecast Saint Petersburg",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.open-meteo.com/v1/forecast?latitude=59.9386&longitude=30.3141&daily=temperature_2m_max,temperature_2m_min&forecast_days=3&timezone=Europe/Moscow",
+          "protocol": "https",
+          "host": [
+            "api",
+            "open-meteo",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "forecast"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "59.9386"
+            },
+            {
+              "key": "longitude",
+              "value": "30.3141"
+            },
+            {
+              "key": "daily",
+              "value": "temperature_2m_max,temperature_2m_min"
+            },
+            {
+              "key": "forecast_days",
+              "value": "3"
+            },
+            {
+              "key": "timezone",
+              "value": "Europe/Moscow"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "External API / Frankfurter latest USD",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.frankfurter.app/latest?from=USD&to=EUR,RUB",
+          "protocol": "https",
+          "host": [
+            "api",
+            "frankfurter",
+            "app"
+          ],
+          "path": [
+            "latest"
+          ],
+          "query": [
+            {
+              "key": "from",
+              "value": "USD"
+            },
+            {
+              "key": "to",
+              "value": "EUR,RUB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "External API / Frankfurter convert 100 USD to RUB",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.frankfurter.app/latest?amount=100&from=USD&to=RUB",
+          "protocol": "https",
+          "host": [
+            "api",
+            "frankfurter",
+            "app"
+          ],
+          "path": [
+            "latest"
+          ],
+          "query": [
+            {
+              "key": "amount",
+              "value": "100"
+            },
+            {
+              "key": "from",
+              "value": "USD"
+            },
+            {
+              "key": "to",
+              "value": "RUB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "External API / REST Countries Japan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/name/japan",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "name",
+            "japan"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
